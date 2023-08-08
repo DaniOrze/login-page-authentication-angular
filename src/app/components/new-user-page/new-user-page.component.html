@@ -1,1 +1,24 @@
-<p>new-user-page works!</p>
+<div class="main_container">
+    <div class="box">
+        <h1>Sign Up</h1>
+        <h2>Create your account</h2>
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Ex. pat@example.com" formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Role</mat-label>
+            <input matInput formControlName="role">
+          </mat-form-field>
+          <p>Already have an account? <a routerLink="/login">Login</a></p>
+          <button mat-flat-button>Sign Up</button>
+    </div>
+</div>

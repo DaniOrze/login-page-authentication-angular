@@ -7,6 +7,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { NewUserPageComponent } from './components/new-user-page/new-user-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListPageComponent } from './components/user-list-page/user-list-page.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { UserListPageComponent } from './components/user-list-page/user-list-pag
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
