@@ -7,7 +7,7 @@ import { NewUserPageComponent } from './components/new-user-page/new-user-page.c
 const routes: Routes = [
   {path: '', component: UserListPageComponent},
   {path: 'login', component: LoginPageComponent},
-  {path: 'new-user', component: NewUserPageComponent}
+  {path: 'signup', component: NewUserPageComponent}
 ];
 
 @NgModule({
