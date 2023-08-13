@@ -5,13 +5,13 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { NewUserPageComponent } from './components/new-user-page/new-user-page.component';
 
 const routes: Routes = [
-  {path: '', component: UserListPageComponent},
-  {path: 'login', component: LoginPageComponent},
-  {path: 'signup', component: NewUserPageComponent}
+  { path: '', component: UserListPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'signup', component: NewUserPageComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

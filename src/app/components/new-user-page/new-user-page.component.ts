@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UsersStoreService } from 'src/app/store/users-store.service';
 
 @Component({
   selector: 'app-new-user-page',
   templateUrl: './new-user-page.component.html',
-  styleUrls: ['./new-user-page.component.css']
+  styleUrls: ['./new-user-page.component.css'],
 })
 export class NewUserPageComponent implements OnInit {
-
-  constructor(private formBuilder: FormBuilder){}
+  constructor(
+    private formBuilder: FormBuilder,
+    private userStore: UsersStoreService,
+  ) {}
 
   public newUserForm!: FormGroup;
 
@@ -25,6 +28,6 @@ export class NewUserPageComponent implements OnInit {
   }
 
   public submitForm(): void {
+    this.userStore.setFormNewUser(this.newUserForm.value);
   }
-
 }
