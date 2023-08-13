@@ -14,6 +14,7 @@ export class LoginPageComponent implements OnInit {
   ) {}
 
   public loginForm!: FormGroup;
+  public showPassword = false;
 
   ngOnInit(): void {
     this.createLoginForm();
@@ -27,5 +28,9 @@ export class LoginPageComponent implements OnInit {
 
   public submitForm(): void {
     this.userStore.setFormLogin(this.loginForm.value);
+  }
+
+  public passwordVisibility(): void {
+    this.showPassword = !this.showPassword;
   }
 }
