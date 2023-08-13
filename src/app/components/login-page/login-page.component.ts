@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UsersStoreService } from 'src/app/store/users-store.service';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  styleUrls: ['./login-page.component.css'],
 })
-
 export class LoginPageComponent implements OnInit {
-
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private userStore: UsersStoreService,
+  ) {}
 
   public loginForm!: FormGroup;
 
@@ -24,8 +26,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   public submitForm(): void {
-    
+    this.userStore.setFormLogin(this.loginForm.value);
   }
-
-
 }

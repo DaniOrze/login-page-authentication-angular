@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "dani@gmail.com",
+      "password": "$2a$10$c.3udaBq1xwFGa0Xs8wXUOw3hpn6p6S.awPeHWLNoydKSxbr/M54W",
+      "name": "oi",
+      "role": "admin",
+      "id": 1
+    }
+  ]
+}
