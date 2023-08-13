@@ -14,6 +14,7 @@ export class NewUserPageComponent implements OnInit {
   ) {}
 
   public newUserForm!: FormGroup;
+  public showPassword = false;
 
   ngOnInit(): void {
     this.createNewUserForm();
@@ -29,5 +30,9 @@ export class NewUserPageComponent implements OnInit {
 
   public submitForm(): void {
     this.userStore.setFormNewUser(this.newUserForm.value);
+  }
+
+  public passwordVisibility(): void {
+    this.showPassword = !this.showPassword;
   }
 }
