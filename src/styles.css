@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-image: linear-gradient(to bottom right, #bd4b97, #59258a);}
+
+.snackbar-success {
+    --mat-mdc-snack-bar-button-color: #ffffff;
+    --mdc-snackbar-container-color: #43a047;
+    --mdc-snackbar-supporting-text-color: #ffffff;
+    --mat-snack-bar-button-color: #ffffff;
+  }
+
+  .snackbar-error {
+    --mat-mdc-snack-bar-button-color: #ffffff;
+    --mdc-snackbar-container-color: #d32f2f;
+    --mdc-snackbar-supporting-text-color: #ffffff;
+    --mat-snack-bar-button-color: #ffffff;
+  }
