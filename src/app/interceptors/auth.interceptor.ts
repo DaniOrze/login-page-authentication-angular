@@ -7,10 +7,14 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { SnackbarService } from '../services/snackbar.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private snackbarService: SnackbarService,
+  ) {}
 
   intercept(
     request: HttpRequest<unknown>,
@@ -25,8 +29,11 @@ export class AuthInterceptor implements HttpInterceptor {
     }
 
     if (!token) {
+      if (request.url.includes('/login')) {
+        return next.handle(request);
+      }
       this.router.navigate(['/login']);
-      alert('Usuário não autorizado');
+      this.snackbarService.showSnackbarError('Access denied!');
       return next.handle(request);
     }
 

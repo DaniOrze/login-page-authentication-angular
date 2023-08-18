@@ -4,6 +4,7 @@ import { Login } from '../models/login.interface';
 import { UserService } from '../services/user.service';
 import { User } from '../models/user.interface';
 import { Router } from '@angular/router';
+import { SnackbarService } from '../services/snackbar.service';
 
 @Injectable({
   providedIn: 'root',
@@ -16,6 +17,7 @@ export class UsersStoreService {
   constructor(
     private userService: UserService,
     private router: Router,
+    private snackbarService: SnackbarService,
   ) {
     this.FormLoginSubject = new BehaviorSubject<Login>({} as Login);
     this.FormNewUserSubject = new BehaviorSubject<User>({} as User);
@@ -32,13 +34,13 @@ export class UsersStoreService {
     ).subscribe(formValue => {
       this.userService.login(formValue).subscribe({
         next: request => {
+          this.snackbarService.showSnackbarSuccess('Login successful!');
           localStorage.setItem('token', request.accessToken);
           localStorage.setItem('id', JSON.stringify(request.user.id));
           this.router.navigate(['/list']);
-          alert('Usuário logado');
         },
         error: err => {
-          alert('Usuário não logado');
+          this.snackbarService.showSnackbarError('Email or password wrong!');
         },
       });
     });
@@ -51,10 +53,12 @@ export class UsersStoreService {
     ).subscribe(formValue => {
       this.userService.newUser(formValue).subscribe({
         next: () => {
-          alert('Usuário cadastrado');
+          this.snackbarService.showSnackbarSuccess('Signed up successfully!');
+          this.router.navigate(['/login']);
         },
         error: err => {
-          alert('Usuário não cadastrado');
+          this.snackbarService.showSnackbarError('Email or password wrong!');
+          this.router.navigate(['/signup']);
         },
       });
     });
@@ -77,11 +81,11 @@ export class UsersStoreService {
 
   public setFormNewUser(form: User): void {
     this.FormNewUserSubject.next(form);
-    this.router.navigate(['/login']);
   }
 
   public logout(): void {
     localStorage.clear();
+    this.snackbarService.showSnackbarSuccess('Logouted successfully!');
     this.router.navigate(['/login']);
   }
 }
