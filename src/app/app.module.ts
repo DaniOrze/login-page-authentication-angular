@@ -12,12 +12,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
-import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoaderComponent } from './components/loader/loader.component';
-import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
+import { AuthInterceptor } from './interceptors/auth/auth.interceptor';
+import { LoaderInterceptor } from './interceptors/loader/loader.interceptor';
 
 @NgModule({
   declarations: [
