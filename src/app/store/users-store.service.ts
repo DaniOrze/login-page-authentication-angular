@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, debounceTime, filter } from 'rxjs';
 import { Login } from '../models/login.interface';
-import { UserService } from '../services/user.service';
 import { User } from '../models/user.interface';
 import { Router } from '@angular/router';
-import { SnackbarService } from '../services/snackbar.service';
+import { UserService } from '../services/user/user.service';
+import { SnackbarService } from '../services/snackbar/snackbar.service';
 
 @Injectable({
   providedIn: 'root',

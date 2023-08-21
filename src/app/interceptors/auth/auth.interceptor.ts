@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { SnackbarService } from '../services/snackbar.service';
+import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
