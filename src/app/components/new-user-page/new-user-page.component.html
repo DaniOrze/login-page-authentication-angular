@@ -19,7 +19,11 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Role</mat-label>
-      <input matInput formControlName="role">
+      <mat-select formControlName="role">
+        <mat-option value="Admin">Admin</mat-option>
+        <mat-option value="Manager">Manager</mat-option>
+        <mat-option value="Analyst">Analyst</mat-option>
+      </mat-select>
     </mat-form-field>
     <p>Already have an account? <a routerLink="/login">Login</a></p>
     <button mat-flat-button type="submit">Sign Up</button>
