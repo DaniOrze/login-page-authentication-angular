@@ -14,6 +14,9 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoaderComponent } from './components/loader/loader.component';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     LoginPageComponent,
     NewUserPageComponent,
     UserListPageComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,8 +37,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HttpClientModule,
     MatIconModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true,
+    },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
