@@ -70,3 +70,31 @@ a:hover {
 mat-icon {
     color: rgb(255, 255, 255, 0.6);
 }
+
+@media (max-width: 500px) {
+  .box {
+    width: 20em;
+  }
+
+  :host ::ng-deep .mat-mdc-text-field-wrapper {
+    width: 18em;
+  }
+
+  button {
+    width: 18em;
+  }
+}
+
+@media (max-width: 320px) {
+  .box {
+    width: 16em;
+  }
+
+  :host ::ng-deep .mat-mdc-text-field-wrapper {
+    width: 14em;
+  }
+
+  button {
+    width: 14em;
+  }
+}

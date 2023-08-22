@@ -58,3 +58,39 @@ a:hover {
     transition: 0.3s;
     color: rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 500px) {
+  .box {
+    width: 20em;
+  }
+
+  :host ::ng-deep .mat-mdc-text-field-wrapper {
+    width: 18em;
+  }
+
+  button {
+    width: 18em;
+  }
+
+  p {
+    width: 20em;
+  }
+}
+
+@media (max-width: 320px) {
+  .box {
+    width: 16em;
+  }
+
+  :host ::ng-deep .mat-mdc-text-field-wrapper {
+    width: 14em;
+  }
+
+  button {
+    width: 14em;
+  }
+
+  p {
+    width: 16em;
+  }
+}
