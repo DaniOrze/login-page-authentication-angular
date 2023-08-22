@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "email": "dani@gmail.com",
-      "password": "$2a$10$c.3udaBq1xwFGa0Xs8wXUOw3hpn6p6S.awPeHWLNoydKSxbr/M54W",
-      "name": "oi",
-      "role": "admin",
+      "email": "jondoe@example.com",
+      "password": "$2a$10$44QUh.7JfCPr23Y90IPUt.QE2FojlbqW30jEILdtY2q.Zzw312Z52",
+      "name": "Jon Doe",
+      "role": "Admin",
       "id": 1
     }
   ]
