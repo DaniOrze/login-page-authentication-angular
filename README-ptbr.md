@@ -9,12 +9,20 @@
 
 Este projeto é um autenticador de login com foco na parte frontend e utilização da blibioteca JSON Server Auth para as requests do backend.
 
-<img src="src/assets/login_page.png" width="400px"/>
-<img src="src/assets/signup_page.png" width="400px"/>
-<img src="src/assets/loged_page.png" width="400px"/>
-<img src="src/assets/loading_interceptor2.png" width="400px"/>
-<img src="src/assets/snackbar_sucess.png" width="400px"/>
-<img src="src/assets/snackbar_error.png" width="400px"/>
+<p align="center">
+  <p>
+    <img src="src/assets/login_page.png" width="400px"/>
+    <img src="src/assets/signup_page.png" width="400px"/>
+  </p>
+  <p>
+    <img src="src/assets/loged_page.png" width="400px"/>
+    <img src="src/assets/loading_interceptor2.png" width="400px"/>
+  </p>
+    <p>
+    <img src="src/assets/snackbar_sucess.png" width="400px"/>
+    <img src="src/assets/snackbar_error.png" width="400px"/>
+  </p>
+</p>
 
 ## Features
 
@@ -82,4 +90,4 @@ Contribuições são bem-vindas! Caso encontre algum ponto a ser melhorado ou su
 
 ## Licença
 
-Este projeto está licenciado pelo MIT.
+Este projeto está licenciado pelo [MIT](./LICENSE).

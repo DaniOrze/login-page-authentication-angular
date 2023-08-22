@@ -11,12 +11,20 @@ If you prefer to read in Brazilian Portuguese, please, click [here](./README-ptb
 
 This project is a login authenticator with a focus on the frontend, utilizing the JSON Server Auth library for backend requests.
 
-<img src="src/assets/login_page.png" width="400px"/>
-<img src="src/assets/signup_page.png" width="400px"/>
-<img src="src/assets/loged_page.png" width="400px"/>
-<img src="src/assets/loading_interceptor2.png" width="400px"/>
-<img src="src/assets/snackbar_sucess.png" width="400px"/>
-<img src="src/assets/snackbar_error.png" width="400px"/>
+<p align="center">
+  <p>
+    <img src="src/assets/login_page.png" width="400px"/>
+    <img src="src/assets/signup_page.png" width="400px"/>
+  </p>
+  <p>
+    <img src="src/assets/loged_page.png" width="400px"/>
+    <img src="src/assets/loading_interceptor2.png" width="400px"/>
+  </p>
+    <p>
+    <img src="src/assets/snackbar_sucess.png" width="400px"/>
+    <img src="src/assets/snackbar_error.png" width="400px"/>
+  </p>
+</p>
 
 ## Features
 
@@ -84,4 +92,4 @@ Contributions are welcome! If you come across any areas for improvement or have 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT](./LICENSE) License.
